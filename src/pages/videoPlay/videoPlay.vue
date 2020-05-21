@@ -42,8 +42,7 @@ export default {
       const { tempFilePath } = (
         await uni.downloadFile({ url: this.video.video })
       )[1];
-
-      await uni.saveImageToPhotosAlbum({
+      await uni.saveVideoToPhotosAlbum({
         filePath: tempFilePath
       });
       uni.hideLoading();
