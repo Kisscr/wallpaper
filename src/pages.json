@@ -1,16 +1,91 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	"pages": [
 		{
-			"path": "pages/index/index",
+			"path": "pages/home/home",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "懂你找图"
+			}
+		},
+		{
+			"path": "pages/video/video",
+			"style": {
+				"navigationBarTitleText": "精美视频"
+			}
+		},
+		{
+			"path": "pages/videoPlay/videoPlay",
+			"style": {
+				"navigationBarTitleText": "视频播放"
+			}
+		},
+		{
+			"path": "pages/imgCategory/imgCategory",
+			"style": {
+				"navigationBarTitleText": "图片分类"
+			}
+		},
+		{
+			"path": "pages/album-details/album-details",
+			"style": {
+				"navigationBarTitleText": "专辑详情"
+			}
+		},
+		{
+			"path": "pages/demo/swiperDemo",
+			"style": {
+				"navigationBarTitleText": "封装滑动手势组件"
+			}
+		},
+		{
+			"path": "pages/imgDetails/imgDetails",
+			"style": {
+				"navigationBarTitleText": "图片详情"
+			}
+		},
+		{
+			"path": "pages/horizontal/horizontal",
+			"style": {
+				"navigationBarTitleText": "横屏"
+			}
+		},
+		{
+			"path": "pages/search/search",
+			"style": {
+				"navigationBarTitleText": "搜索"
+			}
+		},
+		{
+			"path": "pages/mine/mine",
+			"style": {
+				"navigationBarTitleText": "我的"
 			}
 		}
 	],
 	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
-	}
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "懂你找图",
+		"navigationBarBackgroundColor": "#000"
+	},
+	"tabBar": {
+		"color": "#8a8a8a",
+		"selectedColor": "#d93373",
+		"backgroundColor": "#fff",
+		"position": "bottom",
+		"borderStyle": "black",
+		"list": [
+			{
+				"pagePath": "pages/home/home",
+				"text": "首页",
+				"iconPath": "./static/icon/_home.png",
+				"selectedIconPath": "./static/icon/home.png"
+			},
+			{
+				"pagePath": "pages/video/video",
+				"text": "精美视频",
+				"iconPath": "./static/icon/_videocamera.png",
+				"selectedIconPath": "./static/icon/videocamera.png"
+			}
+		]
+	},
+	"sitemapLoaction": "sitemap.json"
 }
