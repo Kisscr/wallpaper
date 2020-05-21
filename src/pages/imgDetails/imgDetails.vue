@@ -156,6 +156,8 @@ export default {
   },
 
   methods: {
+    onShareAppMessage() {},
+
     // 获取图片数据的方法
     getData() {
       const { imgList } = getApp().globalData;
@@ -216,27 +218,27 @@ export default {
     async handleDownloadImg() {
       // 点击后弹出下载中
       await uni.showLoading({
-        title: '下载中...'
-      })
+        title: "下载中..."
+      });
 
       // 1. 先将图片下载到小程序内 tempFilePath
       const res1 = await uni.downloadFile({
         url: this.currentImg.img
       });
-      const { tempFilePath } = res1[1]
+      const { tempFilePath } = res1[1];
 
       // 2. 通过 tempFilePath 将图片保存到本地
       const res2 = await uni.saveImageToPhotosAlbum({
         filePath: tempFilePath
-      })
+      });
       // console.log(res2)
 
       // 3. 下载成功后，隐藏loading，弹出下载成功
-      uni.hideLoading()
+      uni.hideLoading();
 
       await uni.showToast({
-        title: '下载成功'
-      })
+        title: "下载成功"
+      });
     }
   }
 };

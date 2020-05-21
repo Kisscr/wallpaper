@@ -30,6 +30,7 @@ export default {
   },
 
   methods: {
+    onShareAppMessage() {},
     handleMuted() {
       this.muted = !this.muted;
     },

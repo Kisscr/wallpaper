@@ -144,6 +144,10 @@ export default {
     async _getVideoCate() {
       const res = await getVideoCate();
       console.log(res);
+    },
+
+    onShareAppMessage() {
+        
     }
   }
 };
